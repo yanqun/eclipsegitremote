@@ -1,21 +1,22 @@
 package dynamicproxy;
 
+//123
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 /*
- * ¸Ã´úÀíÀàµÄÄÚ²¿ÊôÐÔÊÇObjectÀàÐÍ£¬Êµ¼ÊÊ¹ÓÃµÄÊ±ºòÍ¨¹ý¸ÃÀàµÄ¹¹Ôì·½·¨´«µÝ½øÀ´Ò»¸ö¶ÔÏó£¬
- * ´ËÍâ£¬¸ÃÀà»¹ÊµÏÖÁËinvoke·½·¨£¬¸Ã·½·¨ÖÐµÄmethod.invodeÆäÊµ¾ÍÊÇµ÷ÓÃ±»´úÀí¶ÔÏóµÄ½«ÒªÖ´ÐÐµÄ·½·¨£¬·½·¨µÄ²ÎÊýÊÇsub,
- * ±íÊ¾¸Ã·½·¨´ÓÊôÓÚsub,Í¨¹ý¶¯Ì¬´úÀíÀà£¬ÎÒÃÇ¿ÉÒÔÔÚÖ´ÐÐÕæÊµ¶ÔÏóµÄ·½·¨Ç°ºó¼ÓÈëÒ»Ð©×Ô¼ºµÄ¶îÍâ·½·¨¡£
+ * ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Objectï¿½ï¿½ï¿½Í£ï¿½Êµï¿½ï¿½Ê¹ï¿½Ãµï¿½Ê±ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½à»¹Êµï¿½ï¿½ï¿½ï¿½invokeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½Ðµï¿½method.invodeï¿½ï¿½Êµï¿½ï¿½ï¿½Çµï¿½ï¿½Ã±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ÒªÖ´ï¿½ÐµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½sub,
+ * ï¿½ï¿½Ê¾ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sub,Í¨ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ð©ï¿½Ô¼ï¿½ï¿½Ä¶ï¿½ï¿½â·½ï¿½ï¿½ï¿½ï¿½
  */
 public class DynamicSubject  implements InvocationHandler{
-	//´úÀíµÄÕæÊµ¶ÔÏó(¿ÉÒÔ´úÀíÈÎºÎÕæÊµÀàÐÍ£¬Òò´Ë²»ÊÇRealSubject)
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½RealSubject)
 	private Object sub ;
 	
 	public DynamicSubject(Object sub) {
 		this.sub = sub;
 	}
 
-	//·µ»ØÖµ£º´úÀí·½·¨µÄ·µ»ØÖµ
+	//ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Öµ
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		System.out.println("before..."+method);
