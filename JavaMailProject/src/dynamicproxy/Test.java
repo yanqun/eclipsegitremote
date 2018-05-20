@@ -1,5 +1,5 @@
 package dynamicproxy;
-
+//123
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 
@@ -10,7 +10,7 @@ public class Test {
 		
 		
 		Class classType = proxyHandler.getClass();
-		//一次性生成代理
+		//脪禄麓脦脨脭脡煤鲁脡麓煤脌铆
 		Subject subject = (Subject) Proxy.newProxyInstance(classType.getClassLoader(), realSubject.getClass().getInterfaces(),proxyHandler);			
 		subject.request();
 		System.out.println(subject.getClass());
