@@ -1,6 +1,6 @@
 import java.util.Date;
 import java.util.Properties;
-//hello 123world
+//hello abc
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
