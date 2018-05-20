@@ -1,6 +1,6 @@
 import java.util.Date;
 import java.util.Properties;
-//88999
+//8yy
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
