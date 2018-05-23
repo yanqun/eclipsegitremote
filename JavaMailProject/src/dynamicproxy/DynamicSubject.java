@@ -22,7 +22,7 @@ public class DynamicSubject  implements InvocationHandler{
 		System.out.println("before..."+method);
 		
 		method.invoke(sub, args) ;
-		System.out.println("after..."+method);
+		System.out.println("after啊阿斯达..."+method);
 		
 		return null;
 	}
